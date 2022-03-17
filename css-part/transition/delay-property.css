@@ -1,0 +1,77 @@
+body{
+    display: flex;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background:red;
+    font: bold;
+    color: white;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    background: wheat;
+}
+
+
+/* transition-delay : transtion이 얼마 만큼 기다렸다가 실행할지(단위 : s/ms, 음수도 가능) */
+/* .first {
+    transition-delay: 0s;
+}
+.second {
+    transition-delay: 1s;
+}
+.third {
+    transition-delay: 2s;
+} */
+
+/* ========================================= */
+
+/* transition-duration : transition의 지속 시간 지정, 얼마만큼 시간동안 변할지 지정(단위 : s/ms)
+                        delay에 비해 애니메이션 효과 상승 */
+/* .first {
+    transition-duration: 2s;
+    transition-delay: 0s;
+}
+
+transition(hover & red > violet)이 2초의 지연 후 10초에 걸쳐 바뀜.
+.second {
+    transition-duration: 10s;
+    transition-delay: 2s;
+}
+
+delay가 음수: 지연없이 시작, delay의 절대값인 2초 때의 상태에서부터 시작
+.third {
+    transition-duration: 10s;
+    transition-delay: -2s;
+} */
+
+/* ========================================= */
+
+/* transition-property : 저장하고 싶거나 변경하고 싶은 속성의 이름. 이 속성 값에 따라 transition 효과를 지정할 프로퍼티가 결정(default:all) */
+
+.box {
+	width: 100px;
+	height:100px;
+	background-color: red;
+	text-align:center;
+	color:white;
+	font-size:20px;
+	font-weight:bold;
+	line-height:100px;
+/* 	모든 속성에 transition효과 적용. 2초동안 크기, 색상 변화 발생*/
+	transition-property:all;
+	transition-duration:2s;
+}
+.box:hover{
+	background-color:blue;
+	width:200px;
+	height:200px;
+	line-height:200px;
+}
+

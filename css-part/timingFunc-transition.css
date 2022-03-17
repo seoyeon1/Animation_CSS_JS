@@ -1,0 +1,59 @@
+/* transition-timing-function : transition 진행속도 설정.
+    cubic bezier 곡선의 4개 컨트롤 포인트 > transition의 처음부터 끝까지 효과 제어
+    다양한 속성 값이 있으니까 많은 실습 필요 > 블로그에 정리 예정 */
+    
+div {
+    background-color: coral;
+    color: white;
+    text-align: center;
+    width: 100px;
+    margin-bottom: 5px;
+    padding: 5px;
+    transition-duration: 1s;
+}
+div:hover {
+    width: 300px;
+}
+
+
+.ease:hover {
+transition-timing-function: ease;
+}
+.linear:hover {
+transition-timing-function: linear;
+}
+.ease-in:hover {
+transition-timing-function: ease-in;
+}
+.ease-out:hover {
+transition-timing-function: ease-out;
+}
+.ease-in-out:hover {
+transition-timing-function: ease-in-out;
+}
+.step-start:hover {
+transition-timing-function: step-start;
+}
+.step-end:hover {
+transition-timing-function: step-end;
+}
+/* ========================== */
+/* transition :  */
+.box {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	text-align: center;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 100px;
+    /* box 너비 속성을 1초 지연 후 2초 동안 일정 속도로 늘리기  */
+    transition : width 2s linear 1s;
+}
+.box:hover {
+	background-color: blue;
+	width: 200px;
+	height: 200px;
+	line-height: 200px;
+}
