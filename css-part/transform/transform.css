@@ -1,0 +1,53 @@
+.container {
+	display: flex;
+	width: 400px; 
+	height: 400px;
+	background-color:greenyellow;
+
+/* 컨테이너 속 아이템 정렬 : align-items = h정렬, justify-content = w정렬  */
+	align-items: center;
+	justify-content: center;
+}
+.box{
+	width:100px;
+	height:100px;
+	background:dodgerblue;
+	transition:all 1s;
+}
+
+/* ======================================== */
+
+/* scale(x,y) : (중심점을 기준으로) 크기(w,h) 변형 속성. 1 = 100%(원본), (x,y):x축, y축 의미(단위:deg(각도))
+				 scale(2) : (x도 y도) 크기 200% 증가. scale(2,2) 같은 의미*/
+.box:hover{
+	transform: scale(3,2);
+}
+
+/* ======================================== */
+
+/* rotate(degree) : 입력값만큼 객체를 우회전시키는 속성. 
+360deg:오른쪽으로 한 바퀴, transform:rotate(1turn) 같은 의미*/
+/* translate(x,y) : (가운데를 중심으로) 객체를 (오른쪽,아래쪽) 위치로 이동시키는 속성. 1개의 인자만 입력 : x축만 이동*/
+.box:hover{
+	transform:rotate(360deg);
+	transform:translate(-100px);
+}
+
+/* ======================================== */
+
+/* skew(x,y) : 객체의 형태를 왜곡시키는(기준점으로부터 왼쪽위에 점, 오른쪽아래에 점을 당겨는) 속성. (단위:deg)
+    skewX : X축 기준으로 변형, skewY : Y축 기준으로 변형*/
+.box:hover{
+	transform: skew(20deg, 20deg);
+}
+
+/* ======================================== */
+
+/* transform-origin : 대상 객체의 기준점 위치 변경 속성 */
+.box {
+    /* 기준점 왼쪽 위로 변경 */
+    transform-origin: left top;
+}
+.box:hover {
+    transform: rotate(360deg);
+}
