@@ -1,0 +1,63 @@
+/* keyframes : 변화가 일어나는 지점 설정, 특정 시간동안 설정해둔 값으로 변화시킴
+
+transition : 요소 상태 변화O > 실행가능
+animation : 요소 상태 변화X,O > 실행가능. keyframes으로 프레임 추가, 더 정밀하고 역동적인 컨트롤 가능*/
+
+/* keyframes 애니매이션이름 {
+from(0%) 에서 to(100%)로 애니메이션 재생 }*/
+@keyframes goorm {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+/* 	300px만큼 오른쪽으로 360회전 & 2배 커지면서 이동 */
+		transform: translate(300px, 0) rotate(360deg) scale(2);
+	}
+}
+
+/* ======================================== */
+/* animation-duration : 애니메이션 지속 시간. 0/음수일 때는 실행X */
+
+
+@keyframes goorm {
+	from {
+		transform: translate(100px, 0);
+	}
+	to {
+		transform: translate(300px, 0);
+	}
+}
+
+div {
+	position: absolute;
+	margin: 50px;
+	width: 100px;
+	height: 100px;
+	background-color: #ff0000;
+
+	animation-name: goorm;
+}
+
+/* 재생시간 : 0 */
+.duration_0s {
+	top: 20px;
+	animation-duration: 0;
+}
+
+/* 음수 */
+.duration_minus {
+	top: 130px;
+	animation-duration: -3s;
+}
+
+/* 양수 */
+.duration_plus {
+	top: 240px;
+	animation-duration: 3s;
+}
+
+/* 1초 이하 */
+.duration_ms {
+	top: 350px;
+	animation-duration: 500ms;
+}
