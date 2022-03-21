@@ -61,3 +61,158 @@ div {
 	top: 350px;
 	animation-duration: 500ms;
 }
+
+/* ======================================== */
+
+
+/* iteration-count : 애니메이션 재생 횟수 설정. 
+기본값, 음수 : 1번 재생. 유리수 : 재생 도중 첫 번째 프레임으로 돌아가기. infinite : 무한 반복 */
+
+/* timing-function : keyframes의 재생 속도 조절 */
+
+@keyframes goorm {
+	from {
+		transform: translate(100px, 0);
+	}
+	
+	to {
+		transform: translate(300px, 0);
+	}
+}
+
+div {
+	position: absolute;
+	margin: 50px;
+	width: 100px;
+	height: 100px;
+	background-color: #ff0000;
+
+	animation-name: goorm;
+	animation-duration: 1s;
+}
+
+.iteration-count_0 {
+	top: 20px;
+	animation-iteration-count: 0;
+	animation-timing-function: ease; /* 기본값 */
+	animation-timing-function: cubic-bazier(0,25, 0.1, 0.25, 1);
+}
+
+.iteration-count_minus {
+	top: 130px;
+	animation-iteration-count: -3;
+	animation-timing-function: linear;
+	animation-timing-function: cubic-bazier(0,0,1,1);
+}
+
+.iteration-count_plus {
+	top: 240px;
+	animation-iteration-count: 3;
+	animation-timing-function: ease-in;
+	animation-timing-function: cubic-bazier(0.42,0,1,1);
+}
+
+/* 유리수 > 재생 도중 첫 번째로 돌아가버림 */
+.iteration-count_rational {
+	top: 350px;
+	animation-iteration-count: 1.5;
+	animation-timing-function: ease-out;
+	animation-timing-function: cubic-bazier(0,0,0.58,1);
+}
+
+.iteration-count_infinite {
+	top: 460px;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-timing-function: cubic-bazier(0.42,0,0.58,1);
+}
+
+/* ======================================== */
+
+
+/* animation-direction : 애니메이션 재생 방향(순/역) 설정. from(0%) ~ to(100%) */
+
+div {
+	position: absolute;
+	margin: 50px;
+	width: 100px;
+	height: 100px;
+	background-color: #ff0000;
+
+	animation-name: goorm;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+.direction_normal {
+  top: 20px;
+  animation-direction: normal;
+}
+
+.direction_reverse {
+  top: 130px;
+  animation-direction: reverse;
+}
+
+/* 순방향 시작, 순방향역방향 번갈아 재생. 횟수: 홀수-순방향시작/짝수-역방향시작 */
+.direction_alternate {
+  top: 240px;
+  animation-direction: alternate;
+}
+
+/* alternate와 반대 */
+.direction_alternate-reverse {
+  top: 350px;
+  animation-direction: alternate-reverse;
+}
+
+/* ======================================== */
+
+
+/* animation-delay : 동작 시작을 지연. 값:양수-값 만큼 기다렸다 진행/음수-지연X, 값의 시간이후의 동작부터 시작 */
+
+div {
+	position: absolute;
+	margin: 50px;
+	width: 100px;
+	height: 100px;
+	background-color: #ff0000;
+
+	animation-name: goorm;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.delay_0 {
+	top: 20px;
+	animation-delay: 0;
+}
+
+.delay_now {
+	top: 130px;
+	animation-delay: now;
+}
+
+
+.delay_plus {
+	top: 240px;
+	animation-delay: 1.5s;
+}
+
+.delay_minus {
+	top: 350px;
+	animation-delay: -500ms;
+}
+
+/* ======================================== */
+
+
+/* animation-play-state : 애니메이션 재생여부 설정
+   running : 재생 / paused : 정지*/
+
+.box {
+
+	animation-name: goorm;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}

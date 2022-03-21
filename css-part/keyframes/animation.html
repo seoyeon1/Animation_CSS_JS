@@ -9,10 +9,47 @@
 </head>
 <body>
     <!-- keyframes -->
-    <!-- <div>hello world</div> -->
-    <div class="duration_0s">0s</div>
+    
+    <!-- <div class="duration_0s">0s</div>
     <div class="duration_minus">minus</div>
     <div class="duration_plus">plus</div>
-    <div class="duration_ms">ms</div>
+    <div class="duration_ms">ms</div> -->
+    
+    <!-- iteration-count -->
+    <!-- <div class="iteration-count_0">0</div>
+    <div class="iteration-count_minus">minus</div>
+    <div class="iteration-count_plus">plus</div>
+    <div class="iteration-count_rational">rational</div>
+    <div class="iteration-count_infinite">infinite</div> -->
+
+    <!-- animation-direction -->
+    <!-- <div class="direction_normal">normal</div>
+    <div class="direction_reverse">reverse</div>
+    <div class="direction_alternate">alternate</div>
+    <div class="direction_alternate-reverse">alternate-reverse</div> -->
+
+    <!-- animation-delay -->
+    <!-- <div class="delay_0">0</div>
+    <div class="delay_now">now</div>
+    <div class="delay_plus">plus</div>
+    <div class="delay_minus">minus</div> -->
+
+    <!-- animation-play-state -->
+    <button class="play">running</button>
+    <button class="stop">paused</button>
+    <div class="box">box</div>
 </body>
+<script>
+    var playBtn = document.querySelector('.play');
+    var stopBtn = document.querySelector('.stop')
+    var box = document.querySelector('.box');
+    // running btn 눌렀을 때 > 재생 상태
+    playBtn.onclick = function () {
+        box.style.animationPlayState = 'running';
+    };
+    // paused btn > 정지 상태
+    stopBtn.onclick = function () {
+        box.style.animationPlayState = 'paused';
+};
+</script>
 </html>
