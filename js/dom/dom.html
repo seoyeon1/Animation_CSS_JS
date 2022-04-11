@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blue {
+	background-color: blue;
+}
+    </style>
+</head>
+<div>
+    <div>
+      <h1>
+        <a href="https://edu.goorm.io">goorm EDU</a> is
+        <span id="serverStatus">Now Available ✅</span>
+      </h1>
+    </div>
+    <div class="contents-wrapper">
+      <p>
+        Lorem, <strong>ipsum</strong> dolor sit amet consectetur adipisicing elit.
+        Recusandae ipsa fugiat hic rerum quos eius
+        <strong>aliquid</strong> reiciendis. Neque iure consequuntur magni et
+        itaque alias, <strong>obcaecati</strong> cupiditate recusandae similique
+        reprehenderit accusantium.
+      </p>
+    </div>
+    <div class="contents-wrapper">
+      <p>End of Notice</p>
+    </div>
+  </div>
+</body>
+<script>
+    //getElementById(id) : html의 id 속성 값을 기준으로 DOM에 접근
+    const statusText = document.getElementById('serverStatus');
+    statusText.innerText = 'Not Available 🚧';
+    statusText.style.color = 'red';
+
+    //querySelector(cssSelector) : css의 선택자를 기준으로(여러개일 경우, 가장 첫 번째 요소에 적용) DOM에 접근
+    const statusText = document.querySelector('.contents-wrapper > p');
+    statusText.style.backgroundColor = 'green';
+</script>
+</html>
