@@ -1,5 +1,5 @@
 // getElementsByClassName(className) : 동일한 class이름을 가진 요소들을 모두 담은 배열(HTMLCollection)을 반환
-const contents = document.getElementsByClassName('contents-wrapper');
+//const contents = document.getElementsByClassName('contents-wrapper');
 
 // for문이 돌면서 0번째 요소만 class이름이 blue로 바뀜
 // : HTMLCollection은 실시간으로 (요소에 변화된 내용만) 반영,0번째를 blue로 바꾼 뒤 또다른 반복을 하려고 하면 1<1이 돼버려서 적용X 
@@ -27,4 +27,11 @@ const keywords = [...document.getElementsByTagName('strong')];
 //<strong>에 해당하는 요소의 배경을 파란색으로 
 for (let i = 0; i < keywords.length; i++) {
   keywords[i].className = 'blue';
+}
+//querySelectorAll(css선택자):해당하는 모든 선택자 요소 선택
+
+const contents = [...document.querySelectorAll('.contents-wrapper > p')];
+
+for (let i = 0; i < contents.length; i++) {
+  contents[i].className = 'blue';
 }
